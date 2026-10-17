@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero wrap" aria-labelledby="name">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="small-line" aria-hidden="true"></span>{{ t.eyebrow }}</p>
+    <h1 id="name">{{ t.name }}<span class="other-name" lang="{{ 'zh-CN' if lang == 'en' else 'en' }}">{{ t.other_name }}</span></h1>
+    <p class="hero-statement">{{ t.headline }}</p>
+    <p class="intro">{{ t.intro }}</p>
+    <div class="hero-actions"><a class="button" href="#research">{{ t.labels.explore }} <span aria-hidden="true">↘</span></a><a class="cv-link" href="{{ site.cv }}">{{ t.labels.cv }} <span>{{ t.labels.cv_format }} ↗</span></a></div>
+  </div>
+  <figure class="portrait">
+    <div class="portrait-mat"><img src="/assets/portrait.webp" alt="{{ 'Zicheng Wang outdoors, wearing sunglasses' if lang == 'en' else '戴着墨镜的王子成，摄于户外' }}" width="800" height="800" fetchpriority="high"><span class="portrait-stamp" aria-hidden="true">ZW / FIELD NOTES</span></div>
+    <figcaption><span class="caption-rule" aria-hidden="true"></span>{{ t.portrait_caption }}</figcaption>
+  </figure>
+  <div class="hero-bottom"><p><span class="status-dot" aria-hidden="true"></span>{{ t.current }}</p><a href="{{ site.orcid }}">ORCID <span aria-hidden="true">↗</span></a></div>
+</section>
+<section class="section research-section" id="research" aria-labelledby="research-title">
+  <div class="wrap section-grid"><div class="section-label"><span>01 /</span><h2 id="research-title">{{ t.labels.research }}</h2></div>
+    <div><h3 class="section-statement">{{ t.research_title }}</h3><p class="section-intro">{{ t.research_intro }}</p>
+      <div class="research-grid">{% for item in t.research %}<article class="research-item"><span class="research-number" aria-hidden="true">0{{ loop.index }}</span><h4>{{ item.title }}</h4><p>{{ item.text }}</p></article>{% endfor %}</div>
+    </div>
+  </div>
+</section>
+<section class="section wrap section-grid" id="publications" aria-labelledby="papers-title">
+  <div class="section-label"><span>02 /</span><h2 id="papers-title">{{ t.labels.papers }}</h2></div>
+  <div><p class="section-intro">{{ t.papers_intro }}</p><div class="paper-list">{% for paper in site.papers %}
+    <article class="paper"><div class="paper-meta"><span>{{ paper.kind if lang == 'en' else paper.kind_zh }}</span><span>{{ paper.year }}</span></div><h3><a href="{{ paper.url }}">{{ paper.title }} <span class="link-arrow" aria-hidden="true">↗</span></a></h3><p class="paper-authors"><strong>Zicheng Wang</strong> et al. <span>· {{ t.labels.first_author }}</span></p><p class="paper-venue">{{ paper.venue }}</p><p class="paper-summary">{{ paper.summary[lang] }}</p><a class="under-link" href="{{ paper.url }}">{{ t.labels.read }} <span aria-hidden="true">↗</span></a></article>
+  {% endfor %}</div></div>
+</section>
+<section class="section projects-section" id="projects" aria-labelledby="projects-title"><div class="wrap section-grid">
+  <div class="section-label"><span>03 /</span><h2 id="projects-title">{{ t.labels.projects }}</h2></div>
+  <div><p class="section-intro">{{ t.project_intro }}</p><div class="project-list">{% for project in site.projects %}<article class="project"><div class="project-index" aria-hidden="true">0{{ loop.index }}</div><div><p class="eyebrow">{{ project.tag }}</p><h3><a href="{{ project.url }}">{{ project.title[lang] }} <span aria-hidden="true">↗</span></a></h3><p>{{ project.text[lang] }}</p>{% if project.upstream is defined %}<p class="upstream">{{ 'Based on' if lang == 'en' else '基于上游项目' }} <a href="{{ project.upstream }}">Power-Agent / PowerMCP ↗</a></p>{% endif %}</div></article>{% endfor %}</div></div>
+</div></section>
+<section class="section wrap section-grid" id="about" aria-labelledby="about-title"><div class="section-label"><span>04 /</span><h2 id="about-title">{{ t.labels.background }}</h2></div><div>
+  <p class="section-intro">{{ t.background_intro }}</p>
+  <div class="background-grid"><div><h3 class="column-title">{{ t.labels.education }}</h3>{% for item in t.education %}<div class="timeline-item"><span class="date">{{ item.period }}</span><h4>{{ item.title }}</h4><p>{{ item.text }}</p></div>{% endfor %}</div><div><h3 class="column-title">{{ t.labels.honors }}</h3>{% for item in t.honors %}<div class="timeline-item"><span class="date">{{ item.year }}</span><h4>{{ item.title }}</h4><p>{{ item.text }}</p></div>{% endfor %}</div></div>
+  <div class="outside"><span aria-hidden="true">✳</span><p><strong>{{ t.labels.outside }}</strong> {{ t.outside }}</p></div>
+</div></section>
+{% if posts %}<section class="section notebook-section" aria-labelledby="notebook-title"><div class="wrap section-grid"><div class="section-label"><span>05 /</span><h2 id="notebook-title">{{ t.nav.notebook }}</h2><a class="under-link" href="{{ notebook }}">{{ t.labels.notes }} ↗</a></div><div><p class="section-intro">{{ t.notebook_intro }}</p>{% for post in posts[:3] %}<article class="note-row"><div class="note-meta"><time datetime="{{ post.date }}">{{ post.date }}</time><span>{{ post.category }}</span></div><h3><a href="{{ post.url }}">{{ post.title }} <span aria-hidden="true">↗</span></a></h3><p>{{ post.description }}</p></article>{% endfor %}</div></div></section>{% endif %}
+<section class="contact wrap" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">{{ t.nav.contact }}</p><h2 id="contact-title">{{ t.contact_title }}</h2><p>{{ t.contact_text }}</p></div><a class="contact-email" href="mailto:{{ site.email }}">{{ site.email }} <span aria-hidden="true">↗</span></a></section>
+{% endblock %}

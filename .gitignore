@@ -1,0 +1,8 @@
+dist/
+.build-history/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+test-results/
+*.log

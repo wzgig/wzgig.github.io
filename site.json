@@ -1,0 +1,92 @@
+{
+  "publish": true,
+  "sensitive": false,
+  "url": "https://wzgig.github.io",
+  "name": "Zicheng Wang",
+  "updated": "2026-10-18",
+  "email": "202310080241@csust.edu.cn",
+  "github": "https://github.com/wzgig",
+  "orcid": "https://orcid.org/0009-0002-8612-2393",
+  "cv": "https://wzgig.github.io/Resume/wang-zicheng-academic-resume.pdf",
+  "languages": {
+    "en": {
+      "name": "Zicheng Wang",
+      "other_name": "王子成",
+      "description": "Zicheng Wang — electrical engineering undergraduate exploring power-system dynamics, interpretable models, and AI-assisted simulation.",
+      "eyebrow": "Electrical engineering · Changsha, China",
+      "headline": "Making sense of a changing grid.",
+      "intro": "I’m an undergraduate in Electrical Engineering and Automation at Changsha University of Science and Technology. I study how renewable generation interacts with the grid, through physical models, equivalent circuits, and machine learning.",
+      "current": "Currently exploring AI-assisted power-system simulation.",
+      "portrait_caption": "A little curiosity, in and out of the lab.",
+      "research_title": "Physics first. New possibilities.",
+      "research_intro": "My work starts with the dynamics of converter-based power systems. I’m interested in models that are useful for analysis and remain connected to physical meaning.",
+      "research": [
+        {"title": "Power-system dynamics", "text": "Modeling renewable-rich systems and understanding oscillations, interactions, and weakly damped components."},
+        {"title": "Interpretable models", "text": "PMSG impedance and admittance, equivalent-circuit representations, and model reduction across operating points."},
+        {"title": "Learning & simulation", "text": "Using machine learning for model prediction, and exploring AI-assisted engineering workflows."}
+      ],
+      "papers_intro": "Two first-author papers on PMSG modeling and prediction across operating conditions.",
+      "project_intro": "Models, tools, and experiments from my research workflow.",
+      "background_intro": "From applied statistics to electrical engineering, I’ve kept an interest in both physical reasoning and data.",
+      "education": [
+        {"period": "2024 — 2027", "title": "Electrical Engineering and Automation", "text": "Changsha University of Science and Technology · Undergraduate, expected June 2027"},
+        {"period": "2023 — 2024", "title": "Applied Statistics", "text": "Coursework at Changsha University of Science and Technology, before transferring to electrical engineering."}
+      ],
+      "honors": [
+        {"year": "2025", "title": "CSEE Cup · National First Prize", "text": "Electrical mathematical modeling · Team leader"},
+        {"year": "2026", "title": "HuaShu Cup · National First Prize", "text": "Mathematical modeling · Team member"}
+      ],
+      "outside": "Away from the screen, I enjoy hiking, cycling, cooking, and video editing.",
+      "contact_title": "Let’s exchange ideas.",
+      "contact_text": "Interested in power-system modeling, renewable energy, or AI-assisted engineering? I’m always glad to learn from a thoughtful conversation.",
+      "notebook_intro": "Notes on models, methods, and things I’m learning along the way.",
+      "footer": "Built to keep learning.",
+      "nav": {"research": "Research", "papers": "Publications", "projects": "Projects", "notebook": "Notebook", "contact": "Contact"},
+      "labels": {"skip": "Skip to content", "menu": "Menu", "theme": "Toggle color theme", "cv": "Curriculum vitae", "cv_format": "PDF · Chinese", "explore": "Explore my work", "research": "Research interests", "papers": "Selected publications", "projects": "Selected projects", "background": "A little background", "education": "Education", "honors": "Selected honors", "outside": "Beyond research", "read": "Read paper", "code": "View repository", "notes": "All notes", "back": "Back to notebook", "first_author": "First author", "updated": "Updated", "home": "Home", "minutes": "min read", "feed": "RSS", "not_found": "This page has wandered off.", "not_found_text": "The address may have changed. You can find my work and notes from the home page."}
+    },
+    "zh": {
+      "name": "王子成",
+      "other_name": "Zicheng Wang",
+      "description": "王子成的个人主页。长沙理工大学电气工程本科生，关注新能源电力系统、可解释建模与 AI 辅助仿真。",
+      "eyebrow": "电气工程 · 中国长沙",
+      "headline": "理解变化中的电网。",
+      "intro": "我是长沙理工大学电气工程及其自动化专业的本科生。我从物理模型、等效电路和机器学习出发，研究新能源发电设备与电网之间的动态交互。",
+      "current": "近期正在探索 AI 辅助的电力系统仿真。",
+      "portrait_caption": "在研究与生活里，保持一点好奇。",
+      "research_title": "从物理出发，探索新的可能。",
+      "research_intro": "我的研究从电力电子化电力系统的动态特性出发，希望建立既有助于分析、又保留物理含义的模型。",
+      "research": [
+        {"title": "电力系统动态", "text": "面向高比例新能源电力系统建模，理解系统振荡、设备交互与弱阻尼环节。"},
+        {"title": "可解释建模", "text": "围绕 PMSG 阻抗与导纳，研究等效电路表示及不同运行工况下的模型降阶。"},
+        {"title": "机器学习与仿真", "text": "利用机器学习开展模型预测，并探索 AI 辅助的工程仿真工作流。"}
+      ],
+      "papers_intro": "两篇第一作者论文，围绕不同运行工况下的 PMSG 建模与预测。",
+      "project_intro": "研究过程中积累的模型、工具与探索。",
+      "background_intro": "从应用统计学走向电气工程，我一直对物理推理与数据方法的结合保持兴趣。",
+      "education": [
+        {"period": "2024 — 2027", "title": "电气工程及其自动化", "text": "长沙理工大学 · 本科在读，预计 2027 年 6 月毕业"},
+        {"period": "2023 — 2024", "title": "应用统计学", "text": "于长沙理工大学修读相关课程，后转入电气工程专业。"}
+      ],
+      "honors": [
+        {"year": "2025", "title": "电工杯 · 全国一等奖", "text": "电工数学建模竞赛 · 队长"},
+        {"year": "2026", "title": "华数杯 · 全国一等奖", "text": "数学建模竞赛 · 队员"}
+      ],
+      "outside": "屏幕之外，我喜欢徒步、骑行、烹饪和视频剪辑。",
+      "contact_title": "一起交流想法。",
+      "contact_text": "如果你也关注电力系统建模、新能源或 AI 辅助工程，欢迎来信交流。期待在讨论中彼此启发。",
+      "notebook_intro": "记录模型、方法，以及一路学习中的思考。",
+      "footer": "保持好奇，继续学习。",
+      "nav": {"research": "研究方向", "papers": "学术论文", "projects": "研究项目", "notebook": "研究笔记", "contact": "联系"},
+      "labels": {"skip": "跳转到正文", "menu": "菜单", "theme": "切换明暗主题", "cv": "个人简历", "cv_format": "PDF · 中文", "explore": "了解我的研究", "research": "研究方向", "papers": "精选论文", "projects": "精选项目", "background": "关于我的一些事", "education": "教育经历", "honors": "部分荣誉", "outside": "研究之外", "read": "阅读论文", "code": "查看仓库", "notes": "全部笔记", "back": "返回研究笔记", "first_author": "第一作者", "updated": "更新于", "home": "首页", "minutes": "分钟阅读", "feed": "RSS", "not_found": "这一页暂时走丢了。", "not_found_text": "地址可能已经改变，你可以从首页继续浏览研究与笔记。"}
+    }
+  },
+  "papers": [
+    {"year": "2026", "kind": "Journal article", "kind_zh": "期刊论文", "title": "Admittance Prediction for PMSG via Dimensionality-Reduced Equivalent Circuits and Support Vector Machines", "venue": "Technologies · 14(6), 323", "authors": "Zicheng Wang et al.", "url": "https://www.mdpi.com/2227-7080/14/6/323", "summary": {"en": "Reduced equivalent circuits and support vector machines for predicting PMSG admittance across operating points.", "zh": "结合降维等效电路与支持向量机，预测不同运行工况下的 PMSG 导纳。"}},
+    {"year": "2026", "kind": "Conference paper", "kind_zh": "会议论文", "title": "Impedance Prediction of PMSG in Circuit Form Under Variable Operating Points", "venue": "ACPEE 2026 · IEEE", "authors": "Zicheng Wang et al.", "url": "https://ieeexplore.ieee.org/document/11524472", "summary": {"en": "An equivalent-circuit approach to PMSG impedance prediction. Presented orally in English at ACPEE 2026, Macau.", "zh": "以等效电路形式开展 PMSG 变工况阻抗预测，于澳门 ACPEE 2026 进行英文口头报告。"}}
+  ],
+  "projects": [
+    {"tag": "MATLAB · PMSG", "url": "https://github.com/wzgig/pmsg-electrical-model-linearization", "title": {"en": "From equations to a small-signal model", "zh": "从电气方程到小信号模型"}, "text": {"en": "PMSG electrical modeling and linearization: a starting point for studying device dynamics.", "zh": "PMSG 电气模型与线性化，为理解设备动态特性建立模型基础。"}},
+    {"tag": "MODELING · EQUIVALENT CIRCUITS", "url": "https://github.com/wzgig/Vector-fitting-and-equivalent-circuit-transformation", "title": {"en": "Making impedance tangible", "zh": "让阻抗拥有电路表达"}, "text": {"en": "From state-space models to impedance matrices, vector fitting, and equivalent-circuit elements.", "zh": "从状态空间模型到阻抗矩阵，经矢量拟合得到等效电路元件。"}},
+    {"tag": "EXPLORATION · AI + SIMULATION", "url": "https://github.com/wzgig/PowerMCP", "title": {"en": "AI-assisted simulation workflows", "zh": "AI 辅助仿真工作流"}, "text": {"en": "Ongoing improvements in my personal working fork of PowerMCP, exploring AI interaction with engineering simulation.", "zh": "在 PowerMCP 个人工作分支中持续探索与改进，连接 AI 与工程仿真。"}, "upstream": "https://github.com/Power-Agent/PowerMCP"}
+  ]
+}

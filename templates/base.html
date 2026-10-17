@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ html_lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  {% if is_404 %}<meta name="robots" content="noindex">{% else %}
+  <link rel="canonical" href="{{ site.url }}{{ route }}">
+  <link rel="alternate" hreflang="{{ html_lang }}" href="{{ site.url }}{{ route }}">
+  {% if alternate %}<link rel="alternate" hreflang="{{ 'zh-CN' if lang == 'en' else 'en' }}" href="{{ site.url }}{{ alternate }}">{% endif %}
+  {% if alternate %}<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ route if lang == 'en' else alternate }}">{% endif %}
+  {% endif %}
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="{{ 'article' if article else 'website' }}">
+  <meta property="og:url" content="{{ site.url }}{{ route }}">
+  <meta property="og:image" content="{{ site.url }}/assets/social.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zicheng Wang · Power systems, models, and learning">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ t.nav.notebook }}" href="{{ home }}feed.xml">
+  <link rel="preload" href="/assets/fonts/lora.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">{{ t.labels.skip }}</a>
+<header class="site-header">
+  <div class="header-inner wrap">
+    <a class="brand" href="{{ home }}" aria-label="{{ t.name }} · {{ t.labels.home }}"><span class="brand-mark" aria-hidden="true">z<span>.</span>w</span><span>{{ t.name }}</span></a>
+    <nav id="navigation" aria-label="{{ 'Main navigation' if lang == 'en' else '主导航' }}">
+      <a href="{{ home }}#research">{{ t.nav.research }}</a>
+      <a href="{{ home }}#publications">{{ t.nav.papers }}</a>
+      <a href="{{ home }}#projects">{{ t.nav.projects }}</a>
+      <a href="{{ notebook }}"{% if route == notebook %} aria-current="page"{% endif %}>{{ t.nav.notebook }}</a>
+    </nav>
+    <div class="header-tools">
+      {% if alternate %}<a class="language" href="{{ alternate }}" lang="{{ 'zh-CN' if lang == 'en' else 'en' }}" hreflang="{{ 'zh-CN' if lang == 'en' else 'en' }}" aria-label="{{ '切换到中文' if lang == 'en' else 'Switch to English' }}">{{ '中文' if lang == 'en' else 'EN' }}</a>{% endif %}
+      <button class="theme-toggle" type="button" aria-label="{{ t.labels.theme }}" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 5a7 7 0 0 1 0 14Z" fill="currentColor"/></svg></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>{{ t.labels.menu }} <span aria-hidden="true">+</span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">{% block content %}{% endblock %}</main>
+<footer class="site-footer wrap">
+  <div><a href="{{ home }}">{{ t.name }}</a><span class="footer-motto">{{ t.footer }}</span></div>
+  <div class="footer-links"><a href="{{ site.github }}">GitHub ↗</a><a href="{{ site.orcid }}">ORCID ↗</a><a href="{{ home }}feed.xml">RSS</a><span>© {{ year }}</span></div>
+</footer>
+</body>
+</html>

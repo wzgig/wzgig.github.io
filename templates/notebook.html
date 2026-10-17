@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="wrap notebook-page"><header class="page-intro"><p class="eyebrow">{{ t.name }} / {{ 'Field notes' if lang == 'en' else '学习与思考' }}</p><h1>{{ t.nav.notebook }}<span class="title-dot">.</span></h1><p>{{ t.notebook_intro }}</p></header>
+<div class="notebook-layout"><aside><p>{{ 'Models. Methods. Open questions.' if lang == 'en' else '模型、方法与尚待解答的问题。' }}</p><a class="under-link" href="{{ home }}feed.xml">{{ 'Follow via RSS' if lang == 'en' else '通过 RSS 订阅' }} ↗</a></aside><div>{% for post in posts %}<article class="note-row"><div class="note-meta"><time datetime="{{ post.date }}">{{ post.date }}</time><span>{{ post.category }}</span><span>{{ post.minutes }} {{ t.labels.minutes }}</span></div><h2><a href="{{ post.url }}">{{ post.title }} <span aria-hidden="true">↗</span></a></h2><p>{{ post.description }}</p></article>{% else %}<p>{{ 'New notes will appear here.' if lang == 'en' else '新的笔记将在这里更新。' }}</p>{% endfor %}</div></div></div>
+{% endblock %}

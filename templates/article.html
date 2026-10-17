@@ -1,0 +1,4 @@
+{% extends 'base.html' %}
+{% block content %}
+<article class="article-page wrap"><a class="back-link" href="{{ notebook }}">← {{ t.labels.back }}</a><header class="article-header"><div class="note-meta"><span>{{ article.category }}</span><time datetime="{{ article.date }}">{{ article.date }}</time><span>{{ article.minutes }} {{ t.labels.minutes }}</span></div><h1>{{ article.title }}</h1><p class="article-deck">{{ article.description }}</p><p class="article-author">{{ t.name }}</p></header><div class="prose">{{ article.html }}</div><div class="article-end"><span aria-hidden="true">✳</span><a href="{{ notebook }}">{{ t.labels.back }} ↗</a></div></article>
+{% endblock %}
